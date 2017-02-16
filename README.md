@@ -1,4 +1,4 @@
-## Welcome to GitHub Pages
+## Welcome to Jaga's DataScience Project on US Election Prediction
 
 You can use the [editor on GitHub](https://github.com/JagaRamesh/HarvardEXT_DSProject/edit/master/README.md) to maintain and preview the content for your website in Markdown files.
 
