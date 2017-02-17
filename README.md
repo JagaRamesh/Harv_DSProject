@@ -51,7 +51,21 @@ From the analysis of voting groups, it is found that there is no major differenc
 ###Code
 
 ###Results
-![Hawaii_results](
+![Hawaii_results](/Images/Hawaii_results.png)
+
+From the statistical analysis for Hawaii, it is concluded with 95% confidence that in 2020 election, the Democratic Party wins and the Republican Party loses in Hawaii. 
+The party votes will be in the following range:
+
+* Democrat: 285,936 (95% confident that democrat votes will be between 226,287
+ and 345,586)
+* Republic: 156,643 (95% confident that republic votes will be between 103,857 and 211,574)
+* Others : 22,956 (95% confident that other votes will be between 16,092 and 27,674)
+
+The following polls supports the 2020 prediction for Hawaii
+
+1.	[Washington Post](https://www.washingtonpost.com/news/the-fix/wp/2014/08/12/51-charts-on-the-2020-elections-yes-you-read-that-right/?utm_term=.3df3134f91cb)
+2.	[future.wikia.com](http://future.wikia.com/wiki/US_Presidential_Election_2020_(Joe'sWorld)?file=Castro2020_predictionmap.jpg)
+
 You can use the [editor on GitHub](https://github.com/JagaRamesh/HarvardEXT_DSProject/edit/master/README.md) to maintain and preview the content for your website in Markdown files.
 
 Whenever you commit to this repository, GitHub Pages will run [Jekyll](https://jekyllrb.com/) to rebuild the pages in your site, from the content in your Markdown files.
