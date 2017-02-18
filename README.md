@@ -210,15 +210,15 @@ From the Monte Carlo analysis, it is statistically determined that in 2020 elect
 * Others : 22,560 (Ranges between 11,920 and 34,120)
 
 The following polls supports the 2020 prediction for North Dakota:
-1.	[Washington post](https://www.washingtonpost.com/news/the-fix/wp/2014/08/12/51-charts-on-the-2020-elections-yes-you-read-that-right/?utm_term=.3df3134f91cb)
-2.	[future.wikia.com](http://future.wikia.com/wiki/US_Presidential_Election_2020_(Joe'sWorld)?file=Castro2020_predictionmap.jpg)
+* [Washington post](https://www.washingtonpost.com/news/the-fix/wp/2014/08/12/51-charts-on-the-2020-elections-yes-you-read-that-right/?utm_term=.3df3134f91cb)
+* [future.wikia.com](http://future.wikia.com/wiki/US_Presidential_Election_2020_(Joe'sWorld)?file=Castro2020_predictionmap.jpg)
 
 ###References
 
-####Hawaii
+###Hawaii
 
 1996 to 2016 County wise total population, voter turnout, party votes
-* [elections.hawaii.gov](http://elections.hawaii.gov/election-results/)
+[elections.hawaii.gov](http://elections.hawaii.gov/election-results/)
 
 1996 to 2016 Total Population, Age, Gender, Race data
 * [census.hawaii.gov](http://census.hawaii.gov/home/population-estimate/)
@@ -233,7 +233,7 @@ Top issues in Hawaii
 2020 Population projection
 * [files.hawaii.gov](http://files.hawaii.gov/dbedt/economic/data_reports/2040-long-range-forecast/2040-long-range-forecast.pdf)
 
-####North Dakota
+###North Dakota
 
 2000 to 2016 County wise total population, voter turnout
 * [nd.gov](https://vip.sos.nd.gov/PortalListDetails.aspx?ptlhPKID=62&ptlPKID=4)
