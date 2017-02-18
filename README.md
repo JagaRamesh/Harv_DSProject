@@ -168,3 +168,26 @@ The following polls supports the 2020 prediction for Hawaii
 
 1.	[Washington Post](https://www.washingtonpost.com/news/the-fix/wp/2014/08/12/51-charts-on-the-2020-elections-yes-you-read-that-right/?utm_term=.3df3134f91cb)
 2.	[future.wikia.com](http://future.wikia.com/wiki/US_Presidential_Election_2020_(Joe'sWorld)?file=Castro2020_predictionmap.jpg)
+
+###North Dakota
+
+North Dakota is located in the Upper Midwestern region of the United States.
+It is the most rural of all the states, with farms covering more than 90% of the land. North Dakota ranks first in the nation's production of spring and durum wheat; other agricultural products include barley, rye, sunflowers, dry edible beans, honey, oats, flaxseed, sugar beets, hay, beef cattle, sheep, and hogs. The state's coal and oil reserves are plentiful, and it also produces natural gas, lignite, clay, sand, and gravel.
+
+The top industries in North Dakota that contribute to GDP Economic development are 
+
+* Agriculture 
+* Oil
+* Tourism (in 2013, 24 million visited North Dakota, and they spent 3.6 billion)
+* Coal Gasification (9th in the country in coal production)
+* Renewable energy (home for renewable energy including wind, bioenergy and ethanol power)
+
+The top issues that the state faces :
+
+* Budget ($1 billion deficit)
+* Economy (Impact to state’s economy due to decline in oil prices)
+* Energy / Environment (Federal rule to reduce CO2 emission by 45% before 2030)
+
+The gender analysis shows an approximately equal percentages of male & female in the voting population for the last 5 elections (Male: 49-50%; Female: 50-51%). Age analysis shows that 66-71% of the voting population are from the age groups 25 to 44 and 45 to 64. Race analysis shows that White population is dominant (89-95%) in the state. North Dakota’s voter turnout is 61 to 65% of the voting population. The agricultural state favored Republicans in every presidential election from 2000 to 2016. The above factors are taken into consideration in arriving at the best fit model for state North Dakota.
+
+
