@@ -202,13 +202,12 @@ The county wise Voter turnout %, democratic vote’s %, Republican vote’s %, a
 
 ###Results
 ![Northdakota Results](/Images/Northdakota_results.png)
-From the Monte Carlo analysis, it is statistically determined that in 2020 election, the Republican Party wins and the Democratic Party loses in North Dakota. 
+From the Monte Carlo analysis, it is statistically determined that in 2020 election, the Republican Party wins and the Democratic Party loses in North Dakota. The party votes will be in the following range:
 
-The party votes will be in the following range:
-Voter turnout: 386,400 (Ranges between 370,000 and 401,400)
-Republic: 227,200 (Ranges between 206,000 and 240,400)
-Democrat: 135,900 (Ranges between 110,500 and 157,400)
-Others : 22,560 (Ranges between 11,920 and 34,120)
+* Voter turnout: 386,400 (Ranges between 370,000 and 401,400)
+* Republic: 227,200 (Ranges between 206,000 and 240,400)
+* Democrat: 135,900 (Ranges between 110,500 and 157,400)
+* Others : 22,560 (Ranges between 11,920 and 34,120)
 
 The following polls supports the 2020 prediction for North Dakota:
 1.	[Washington post](https://www.washingtonpost.com/news/the-fix/wp/2014/08/12/51-charts-on-the-2020-elections-yes-you-read-that-right/?utm_term=.3df3134f91cb)
@@ -217,43 +216,44 @@ The following polls supports the 2020 prediction for North Dakota:
 ###References
 
 ####Hawaii
+
 1996 to 2016 County wise total population, voter turnout, party votes
-http://elections.hawaii.gov/election-results/
+* [elections.hawaii.gov](http://elections.hawaii.gov/election-results/)
 
 1996 to 2016 Total Population, Age, Gender, Race data
-http://census.hawaii.gov/home/population-estimate/
+* [census.hawaii.gov](http://census.hawaii.gov/home/population-estimate/)
 
 Hawaii Economy - Top 5 industries in Hawaii 
-http://www.newsmax.com/FastFeatures/industries-hawaii-strongest-economy/2015/03/05/id/628087/
+* [newsmax.com](http://www.newsmax.com/FastFeatures/industries-hawaii-strongest-economy/2015/03/05/id/628087/)
 
 Top issues in Hawaii 
-http://www.hawaiifreepress.com/ArticlesMain/tabid/56/ID/17421/CQ-Roll-Call-Top-5-Issues-in-Hawaii.aspx
-http://www.civilbeat.org/2015/03/what-are-the-top-five-issues-in-hawaii/
+* [hawaiifreepress.com](http://www.hawaiifreepress.com/ArticlesMain/tabid/56/ID/17421/CQ-Roll-Call-Top-5-Issues-in-Hawaii.aspx)
+* [www.civilbeat.org](http://www.civilbeat.org/2015/03/what-are-the-top-five-issues-in-hawaii/)
 
 2020 Population projection
-http://files.hawaii.gov/dbedt/economic/data_reports/2040-long-range-forecast/2040-long-range-forecast.pdf
+* [files.hawaii.gov](http://files.hawaii.gov/dbedt/economic/data_reports/2040-long-range-forecast/2040-long-range-forecast.pdf)
 
 ####North Dakota
 
 2000 to 2016 County wise total population, voter turnout
-https://vip.sos.nd.gov/PortalListDetails.aspx?ptlhPKID=62&ptlPKID=4
+* [nd.gov](https://vip.sos.nd.gov/PortalListDetails.aspx?ptlhPKID=62&ptlPKID=4)
 
 2000 to 2016 County wise Party votes
-https://vip.sos.nd.gov/PortalListDetails.aspx?ptlhPKID=63&ptlPKID=4#content-start
+* [nd.gov](https://vip.sos.nd.gov/PortalListDetails.aspx?ptlhPKID=63&ptlPKID=4#content-start)
 
 
 2020 Population Projection
-chrome-extension://gbkeegbaiigmenfmjfclcdgdpimamgkj/views/app.html
+* [2020 North Dakota](chrome-extension://gbkeegbaiigmenfmjfclcdgdpimamgkj/views/app.html)
 
 North Dakota GDP
-http://www.deptofnumbers.com/gdp/north-dakota/
-https://www.bea.gov/iTable/iTable.cfm?reqid=70&step=1&acrdn=2#reqid=70&step=10&isuri=1&7003=900&7035=-1&7004=naics&7005=-1&7006=38000&7036=-1&7001=1900&7002=1&7090=70&7007=-1&7093=levels
+* [www.deptofnumbers.com](http://www.deptofnumbers.com/gdp/north-dakota/)
+* [www.bea.gov](https://www.bea.gov/iTable/iTable.cfm?reqid=70&step=1&acrdn=2#reqid=70&step=10&isuri=1&7003=900&7035=-1&7004=naics&7005=-1&7006=38000&7036=-1&7001=1900&7002=1&7090=70&7007=-1&7093=levels)
 
 North Dakota Economy
-http://www.newsmax.com/FastFeatures/industries-in-north-dakota-economy/2015/04/13/id/638158/
-http://cqrollcall.com/statetrackers/top-public-policy-issues-each-state/
+* [newsmax.com](http://www.newsmax.com/FastFeatures/industries-in-north-dakota-economy/2015/04/13/id/638158/)
+* [cqrollcall.com](http://cqrollcall.com/statetrackers/top-public-policy-issues-each-state/)
 
 Other sites
-http://www.infoplease.com/us-states/north-dakota.html
+[www.infoplease.com](http://www.infoplease.com/us-states/north-dakota.html)
 
 
