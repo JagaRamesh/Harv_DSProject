@@ -169,7 +169,7 @@ The following polls supports the 2020 prediction for Hawaii
 1.	[Washington Post](https://www.washingtonpost.com/news/the-fix/wp/2014/08/12/51-charts-on-the-2020-elections-yes-you-read-that-right/?utm_term=.3df3134f91cb)
 2.	[future.wikia.com](http://future.wikia.com/wiki/US_Presidential_Election_2020_(Joe'sWorld)?file=Castro2020_predictionmap.jpg)
 
-###North Dakota
+###North Dakota Analysis
 
 North Dakota is located in the Upper Midwestern region of the United States.
 It is the most rural of all the states, with farms covering more than 90% of the land. North Dakota ranks first in the nation's production of spring and durum wheat; other agricultural products include barley, rye, sunflowers, dry edible beans, honey, oats, flaxseed, sugar beets, hay, beef cattle, sheep, and hogs. The state's coal and oil reserves are plentiful, and it also produces natural gas, lignite, clay, sand, and gravel.
@@ -188,6 +188,17 @@ The top issues that the state faces :
 * Economy (Impact to state’s economy due to decline in oil prices)
 * Energy / Environment (Federal rule to reduce CO2 emission by 45% before 2030)
 
-The gender analysis shows an approximately equal percentages of male & female in the voting population for the last 5 elections (Male: 49-50%; Female: 50-51%). Age analysis shows that 66-71% of the voting population are from the age groups 25 to 44 and 45 to 64. Race analysis shows that White population is dominant (89-95%) in the state. North Dakota’s voter turnout is 61 to 65% of the voting population. The agricultural state favored Republicans in every presidential election from 2000 to 2016. The above factors are taken into consideration in arriving at the best fit model for state North Dakota.
+The **gender analysis** shows an approximately equal percentages of male & female in the voting population for the last 5 elections (Male: 49-50%; Female: 50-51%). **Age analysis** shows that 66-71% of the voting population are from the age groups 25 to 44 and 45 to 64. Race analysis shows that White population is dominant (89-95%) in the state. **North Dakota’s voter turnout is 61 to 65%** of the voting population. The agricultural state favored Republicans in every presidential election from 2000 to 2016. The above factors are taken into consideration in arriving at the best fit model for state North Dakota.
 
+###Method
 
+In North Dakota, the GDP is expected to increase in the next coming years 2017 to 2020. The voter turnout is consistently high in the past 5 elections and ranges between 61 to 65% of the total population. The forecasted 2020 North Dakota’s county wise population is gathered from [here](chrome-extension://gbkeegbaiigmenfmjfclcdgdpimamgkj/views/app.html). 
+
+From the analysis of voting groups, it is found that there is no major difference in the age / gender / race groups voting population distribution in the last 5 elections. Statistical analysis revealed no strong correlation between voting pattern and the voting groups. The North Dakota has 53 counties. **Using the historical election data of 53 counties for the last 5 years, Monte Carlo analysis is performed to determine the likelihood of Republican Party’s win in the 2020 election.** 
+
+The county wise Voter turnout %, democratic vote’s %, Republican vote’s %, and the other Party vote’s % are gathered from the historical election data and the Mean and Standard deviation for those is calculated. The random normal distribution is used to randomly generate Voter turnout %, democratic vote’s %, Republican vote’s %, and the other Party vote’s % based on the calculated mean and standard deviation. The Monte Carlo analysis is performed for 100 iterations using the randomly generated percentages for political parties at the county level.  The party votes are then summed up at the state level to determine the range for 100 iterations. The histogram is used to study the range of party votes and to statistically determine the winning party in North Dakota
+
+###Code
+
+###Results
+![Northdakota Results](/Images/Northdakota_results.png)
