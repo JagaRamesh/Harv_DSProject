@@ -199,7 +199,143 @@ From the analysis of voting groups, it is found that there is no major differenc
 The county wise Voter turnout %, democratic vote’s %, Republican vote’s %, and the other Party vote’s % are gathered from the historical election data and the Mean and Standard deviation for those is calculated. The random normal distribution is used to randomly generate Voter turnout %, democratic vote’s %, Republican vote’s %, and the other Party vote’s % based on the calculated mean and standard deviation. The Monte Carlo analysis is performed for 100 iterations using the randomly generated percentages for political parties at the county level.  The party votes are then summed up at the state level to determine the range for 100 iterations. The histogram is used to study the range of party votes and to statistically determine the winning party in North Dakota
 
 ###Code
+```
+{r}
+#Reading data into R
+nd <- read.csv("/data/NorthDakota.csv",header = TRUE, sep = ",")
+summary(nd)
 
+# Calculating mean and sd for voter turnout, dem, rep, oth votes % at County level 
+# for historical data
+library(plyr)
+nd_hist <- subset(nd, nd$year != "2020") 
+nd1 <- ddply(nd_hist, c("state","county"), summarise,
+                         turnout_per_mean = round(mean(turnout_per, na.rm=TRUE),4),
+                         turnout_per_sd = round(sd(turnout_per, na.rm=TRUE),4),
+                         dem_vote_per_mean = round(mean(dem_vote_per),4),
+                         dem_vote_per_sd   = round(sd(dem_vote_per),4),
+                         rep_vote_per_mean = round(mean(rep_vote_per),4),
+                         rep_vote_per_sd   = round(sd(rep_vote_per),4),
+                         oth_vote_per_mean = round(mean(oth_vote_per),4),
+                         oth_vote_per_sd   = round(sd(oth_vote_per),4)
+)
+#View(nd1)
+
+# Voter turnout calculation for 2020 prediction
+library(sqldf)
+sql_string <- "SELECT nd1.*,nd.total_pop
+               from nd INNER JOIN nd1
+               on nd.county = nd1.county
+               where nd.year= '2020' " 
+nd_2020 <- sqldf(sql_string, stringsAsFactors = FALSE)
+nd2 <- nd_2020
+#View(nd2)
+
+####### Monte carlo iteration ############
+# Generating Random percentages for voter_turnout_per, dem_vote_per, rep_vote_per, oth_vote_per
+nd_rand_all <- data.frame()
+for (i in 1:nrow(nd2))
+{
+  county <- data.frame()
+  nd_rand <- data.frame()
+  iterations <- 100
+  county <- nd2[i,]
+  iseq <- seq(1:iterations)
+  
+  turnout_random <- round(rnorm (n=iterations, mean=county$turnout_per_mean, sd=county$turnout_per_sd),4)
+  dem_random <- round(rnorm (n=iterations, mean=county$dem_vote_per_mean, sd=county$dem_vote_per_sd),4)
+  rep_random <- round(rnorm (n=iterations, mean=county$rep_vote_per_mean, sd=county$rep_vote_per_sd),4)
+  oth_random <- round(rnorm (n=iterations, mean=county$oth_vote_per_mean, sd=county$oth_vote_per_sd),4)
+  
+  dem_random <- ifelse(dem_random < 0, 0, dem_random)
+  rep_random <- ifelse(rep_random < 0, 0, rep_random)
+  oth_random <- ifelse(oth_random < 0, 0, oth_random)
+  
+  nd_rand <- data.frame(county=county$county ,total_pop=county$total_pop, iseq, turnout_random, dem_random,rep_random,oth_random)
+  nd_rand_all <- rbind(nd_rand_all, nd_rand)
+  #View(nd_rand_all)
+}
+
+nd_rand_all$voter_turnout <- round(nd_rand_all$total_pop * nd_rand_all$turnout_random,0)
+nd_rand_all$dem_votes <- round(nd_rand_all$voter_turnout * nd_rand_all$dem_random,0)
+nd_rand_all$rep_votes <- round(nd_rand_all$voter_turnout * nd_rand_all$rep_random,0)
+nd_rand_all$oth_votes <- round(nd_rand_all$voter_turnout * nd_rand_all$oth_random,0)
+
+nd_mc <- aggregate(cbind(voter_turnout,dem_votes,rep_votes,oth_votes)~iseq, data=nd_rand_all,sum, na.rm=TRUE)
+#View(nd_mc)
+# Histogram of MC outcome
+hist(nd_mc$dem_votes/1000,
+     #breaks = 10,
+     breaks=c(0,seq(100,300,10)),
+     main = "2020 Voter Prediction - North Dakota",
+     xlab = "No of Votes in 1000s",
+     col = "red",
+     border=NA,
+     freq = FALSE
+    )
+hist(nd_mc$rep_votes/1000,add=T,
+     breaks=c(0,seq(100,300,10)),
+     col = "blue",
+     border=NA,
+     freq = FALSE
+)
+hist(nd_mc$oth_votes/1000,add=T,
+     #breaks = 10,
+     breaks=c(0,seq(0,200,10)),
+     col = "green",
+     border=NA,
+     freq = FALSE
+)
+
+lines(density(nd_mc$dem_votes/1000), col = "red", lwd=2,lty=2)
+lines(density(nd_mc$rep_votes/1000), col = "blue", lwd=2,lty=2)
+lines(density(nd_mc$oth_votes/1000), col = "green", lwd=2,lty=2)
+
+legend("topright",c("Rep","Dem","Oth"),
+       #pch=c(16,15,17),
+       col = c("blue","red","green"),
+       lty=2:2:2, cex=0.8
+      )
+
+# Finding Min & Max range for Party votes
+summary(nd_mc$voter_turnout)
+summary(nd_mc$rep_votes)
+summary(nd_mc$dem_votes)
+summary(nd_mc$oth_votes)
+
+# Monte Carlo iterations
+plot(nd_mc$iseq, nd_mc$dem_votes/1000,
+     type="l",
+     main = "North Dakota - Party Vote Distribution",
+     xlab = "Monte carlo iterations", 
+     ylab = "No of votes",
+     ylim=c(0,400),xlim=c(1,100),
+     col="red",lwd=2
+)
+par(new=T)
+plot(nd_mc$iseq, nd_mc$rep_votes/1000,
+     type="l",
+     xlab='',ylab='',
+     axes=F,
+     ylim=c(0,400),xlim=c(1,100),
+     col="blue",lwd=2
+)
+par(new=T)
+plot(nd_mc$iseq, nd_mc$oth_votes/1000,
+     type="l",
+     xlab='',ylab='',
+     axes=F,
+     ylim=c(0,400),xlim=c(1,100),
+     col="green",lwd=2
+)
+legend("topright",c("Rep","Dem","Oth"),
+       #pch=c(15,16,17),
+       col = c("blue","red","green"),
+       lty=1:1:1, cex=0.8
+)
+par(new=F)
+
+```
 ###Results
 ![Northdakota Results](/Images/Northdakota_results.png)
 From the Monte Carlo analysis, it is statistically determined that in 2020 election, the Republican Party wins and the Democratic Party loses in North Dakota. The party votes will be in the following range:
@@ -218,7 +354,7 @@ The following polls supports the 2020 prediction for North Dakota:
 ###Hawaii
 
 1996 to 2016 County wise total population, voter turnout, party votes
-[elections.hawaii.gov](http://elections.hawaii.gov/election-results/)
+* [elections.hawaii.gov](http://elections.hawaii.gov/election-results/)
 
 1996 to 2016 Total Population, Age, Gender, Race data
 * [census.hawaii.gov](http://census.hawaii.gov/home/population-estimate/)
@@ -243,7 +379,7 @@ Top issues in Hawaii
 
 
 2020 Population Projection
-* [2020 North Dakota](chrome-extension://gbkeegbaiigmenfmjfclcdgdpimamgkj/views/app.html)
+* chrome-extension://gbkeegbaiigmenfmjfclcdgdpimamgkj/views/app.html
 
 North Dakota GDP
 * [www.deptofnumbers.com](http://www.deptofnumbers.com/gdp/north-dakota/)
@@ -254,6 +390,6 @@ North Dakota Economy
 * [cqrollcall.com](http://cqrollcall.com/statetrackers/top-public-policy-issues-each-state/)
 
 Other sites
-[www.infoplease.com](http://www.infoplease.com/us-states/north-dakota.html)
+* [www.infoplease.com](http://www.infoplease.com/us-states/north-dakota.html)
 
 
