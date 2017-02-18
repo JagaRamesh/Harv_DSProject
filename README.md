@@ -37,6 +37,7 @@ Even though Hawaii is a visitor magnet and the population is increasing in the i
 4. Economy (Hawaii is spending more that it takes)
 5. HealthCare (Inadequate access to Health facilities, Increasing drug use and deficient mental health programs)
 
+![Hawaii voter characteristics](/images/HI_Voter_Chars)
 The **gender analysis** shows an approximately equal percentages of male & female in the voting population for the last 5 elections (Male: 48-51%; Female: 49-52%). **Age analysis** shows that 60-65% of the voting population are from the age groups 25 to 44 and 45 to 64. Race analysis shows that Asian population is dominant (40%) in the state. Cross cultural marriages leads to increase in population of two or more races. White population and the “Two or more races” population are close to 30% each. 
 Hawaii’s voter turnout is the lowest in USA. The **multicultural state favored Democrats** in every presidential election from 2000 to 2016. The above factors are taken into consideration in arriving at the best fit model for state Hawaii.
 
